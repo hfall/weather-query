@@ -1,0 +1,11 @@
+<div class="panel " id="panel">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{convertToDate({daytimeDay:weatherDay.dt}) | date: dateFormat}}</h3>
+	</div>
+	<div class="panel-body">
+		<p>Daytime temperature: <span class="bolder">{{convertToStandard({daytimeTemp:weatherDay.temp.day})}}&deg;</span class="bolder"></p>
+		<p>Nighttime temperature: <span class="bolder">{{convertToStandard({daytimeTemp:weatherDay.temp.night})}}&deg;</span class="bolder"></p>
+		<p class="icon-weather">Weather description:<span style="color:blue; text-transform: capitalize;"> {{weatherDay.weather[0].description}}</span></p>
+		<img ng-src="http://openweathermap.org/img/w/{{weatherDay.weather[0].icon}}.png" class="icon-weather">
+	</div>
+</div>
